@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/gradient_background">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sorting Visualizer"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="12dp" />
+    <EditText
+        android:id="@+id/et_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter numbers separated by spaces"
+        android:inputType="text"
+        android:padding="10dp"
+        android:backgroundTint="#FFFFFF"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#BBFFFFFF"
+        android:layout_marginBottom="12dp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_generate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Generate Bars"
+            android:backgroundTint="#FF5722"
+            android:textColor="#FFFFFF"
+            android:layout_marginEnd="16dp"
+            android:paddingHorizontal="20dp" />
+
+        <Button
+            android:id="@+id/btn_random"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Random Generate Bars"
+            android:backgroundTint="#3F51B5"
+            android:textColor="#FFFFFF"
+            android:paddingHorizontal="20dp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/barContainer"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="#333333"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:elevation="5dp" />
+
+    <SeekBar
+        android:id="@+id/sb_speed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="50"
+        android:progressTint="#FF9800"
+        android:thumbTint="#FF5722"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sorting Status: Idle"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="12dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="12dp">
+
+        <Button
+            android:id="@+id/btn_sort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bubble Sort"
+            android:backgroundTint="#4CAF50"
+            android:textColor="#FFFFFF"
+            android:paddingHorizontal="20dp"
+            android:layout_marginEnd="16dp"
+            android:enabled="false"
+
+            />
+
+        <Button
+            android:id="@+id/btn_pause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pause"
+            android:backgroundTint="#FF9800"
+            android:textColor="#FFFFFF"
+            android:paddingHorizontal="20dp"
+            android:layout_marginEnd="16dp"
+            android:enabled="false"
+            />
+
+        <Button
+            android:id="@+id/btn_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reset"
+            android:backgroundTint="#F44336"
+            android:textColor="#FFFFFF"
+            android:paddingHorizontal="20dp"
+            android:enabled="false"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_selection_sort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selection Sort"
+            android:backgroundTint="#3F51B5"
+            android:textColor="#FFFFFF"
+            android:layout_marginEnd="16dp"
+            android:paddingHorizontal="20dp"
+            android:enabled="false"
+            />
+
+        <Button
+            android:id="@+id/btn_insertion_sort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Insertion Sort"
+            android:backgroundTint="#9C27B0"
+            android:textColor="#FFFFFF"
+            android:paddingHorizontal="20dp"
+            android:enabled="false" />
+        <Button
+            android:id="@+id/btn_merge_sort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Merge Sort"
+            android:backgroundTint="#03A9F4"
+            android:textColor="#FFFFFF"
+            android:paddingHorizontal="20dp"
+            android:enabled="false" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        >
+
+        <Button
+            android:id="@+id/btn_quick_sort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="250dp"
+            android:backgroundTint="#3F51B5"
+            android:enabled="false"
+            android:paddingHorizontal="20dp"
+            android:text="Quick Sort"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+</LinearLayout>

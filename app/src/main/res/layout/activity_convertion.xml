@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/_16dp"
+    android:background="#F8F9FA"
+    tools:context=".convertion">
+
+    <!-- Title Header -->
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:gravity="center"
+        android:padding="@dimen/_16dp"
+        android:text="Infix to Postfix/Prefix Converter"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#333333"
+        android:textStyle="bold" />
+
+    <!-- Infix Input Field -->
+    <EditText
+        android:id="@+id/infixInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter infix expression"
+        android:padding="@dimen/_12dp"
+        android:textSize="18sp"
+        android:background="@drawable/rounded_background"
+        android:layout_marginBottom="@dimen/_16dp" />
+
+    <!-- Postfix/Prefix Result -->
+    <TextView
+        android:id="@+id/Output"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Postfix expression"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#555555"
+        android:padding="@dimen/_10dp"
+        android:background="@drawable/rounded_background"
+
+        android:layout_marginBottom="@dimen/_16dp" />
+
+    <!-- Buttons for Conversion -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/_16dp">
+
+        <Button
+            android:id="@+id/PostfixButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="@dimen/_8dp"
+            android:backgroundTint="#007BFF"
+            android:text="Postfix"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:padding="@dimen/_12dp" />
+
+        <Button
+            android:id="@+id/infixButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#F44336"
+            android:text="Infix"
+            android:textColor="#FFFFFF"
+            android:layout_marginEnd="@dimen/_8dp"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:padding="@dimen/_12dp" />
+        <Button
+            android:id="@+id/PrefixButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#28A745"
+            android:text="Prefix"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:padding="@dimen/_12dp" />
+    </LinearLayout>
+
+    <!-- Table for Step-by-Step Conversion -->
+    <TextView
+        android:id="@+id/tvStepsHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Step-by-Step Conversion"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:layout_marginBottom="@dimen/_8dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/message"
+        android:text="For converting infix to prefix we have to convert infix to postfix and then convert postfix to prefix*"
+        android:visibility="gone"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="@dimen/_8dp"
+        android:layout_marginBottom="@dimen/_16dp"
+        android:background="@drawable/rounded_background">
+
+        <TableLayout
+            android:id="@+id/conversionTable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="0,1,2,3">
+
+            <!-- Table Header -->
+            <TableRow
+                android:background="#E9ECEF">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sr No"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:padding="@dimen/_8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Expression"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:padding="@dimen/_8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Stack"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:padding="@dimen/_8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="output"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:padding="@dimen/_8dp" />
+            </TableRow>
+
+            <!-- Rows for conversion will be added dynamically -->
+
+        </TableLayout>
+    </ScrollView>
+</LinearLayout>
